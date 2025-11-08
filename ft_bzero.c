@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/08 20:44:27 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/08 22:18:09 by vpolard          ###   ########.fr       */
+/*   Created: 2025/11/08 22:03:23 by vpolard           #+#    #+#             */
+/*   Updated: 2025/11/08 22:16:03 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*casted_string;
+	size_t		index;
 
-# include <stdlib.h>
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-
-#endif
+	casted_string = (unsigned char *)s;
+	index = 0;
+	while (index < n)
+	{
+		casted_string[index] = '\0';
+		index++;
+	}
+}
