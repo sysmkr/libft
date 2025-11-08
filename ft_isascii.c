@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
+/*   By: vpolard <vpolardstudent42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/08 20:44:27 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/08 21:05:58 by vpolard          ###   ########.fr       */
+/*   Created: 2025/11/08 21:06:09 by vpolard           #+#    #+#             */
+/*   Updated: 2025/11/08 21:10:55 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_isascii(int c)
+{
+	unsigned char	character;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-
-#endif
+	character = (unsigned char)c;
+	if (character >= 0 && character <= 127)
+		return (1);
+	return (0);
+}
