@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/08 20:44:27 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/08 21:17:47 by vpolard          ###   ########.fr       */
+/*   Created: 2025/11/08 21:13:34 by vpolard           #+#    #+#             */
+/*   Updated: 2025/11/08 21:17:28 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_isprint(int c)
+{
+	unsigned char	character;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-#endif
+	character = (unsigned char)c;
+	if (character >= 32 && character <= 126)
+		return (1);
+	return (0);
+}
