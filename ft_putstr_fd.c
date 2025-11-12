@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 21:39:20 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/11 21:40:38 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:32:20 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -6,16 +6,15 @@
 /*   By: vpolard <vpolardstudent42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 21:06:09 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/08 21:10:55 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 14:26:53 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	unsigned char	character;
-
-	character = (unsigned char)c;
-	if (character >= 0 && character <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

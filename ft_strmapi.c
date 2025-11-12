@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 21:26:01 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/11 21:32:20 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:34:20 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

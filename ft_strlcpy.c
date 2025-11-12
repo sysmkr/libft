@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 23:13:43 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/09 15:48:54 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:33:56 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t dest_size)
 {

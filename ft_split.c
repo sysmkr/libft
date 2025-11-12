@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:50:08 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/11 17:24:39 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:32:35 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static char	**create_array(char const *s, char const c)
 {

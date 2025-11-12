@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 17:02:06 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/09 17:51:05 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:33:42 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t dest_size)
 {

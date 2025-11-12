@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:35:33 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/10 16:53:17 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 14:09:26 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -23,6 +25,6 @@ void	*ft_calloc(size_t count, size_t size)
 	ptr = malloc(total);
 	if (!ptr)
 		return (0);
-	bzero(ptr, total);
+	ft_bzero(ptr, total);
 	return (ptr);
 }

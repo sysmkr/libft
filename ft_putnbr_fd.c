@@ -6,11 +6,13 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 21:44:52 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/11 21:56:11 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 14:10:26 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static	local_putchar_fd(char c, int fd)
+#include "libft.h"
+
+static void	local_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

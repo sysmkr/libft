@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 20:45:23 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/11 21:23:04 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 13:44:09 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static size_t count_char(long n)
 {
@@ -37,29 +39,24 @@ char *ft_itoa(int n)
     char *str = malloc(sizeof(char) * (len + 1));
 
     if (!str)
-        return NULL;
-
+        return (0);
     if (number < 0)
     {
         is_negative = 1;
         number = -number;
         str[0] = '-';
     }
-
     str[len] = '\0';
-
     if (number == 0)
     {
         str[0] = '0';
-        return str;
+        return (str);
     }
-
     while (len > is_negative)
     {
         str[len - 1] = (number % 10) + '0';
         number /= 10;
         len--;
     }
-
-    return str;
+    return (str);
 }

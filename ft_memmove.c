@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 22:38:38 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/08 23:02:04 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:31:18 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

@@ -6,37 +6,13 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 23:54:57 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/11 00:13:24 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 15:32:48 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	size_t		index;
-	size_t		set_index;
-	size_t		*clean_string;
-	size_t		clean_index;
+#include "libft.h"
 
-	index = 0;
-	set_index = 0;
-	clean_index = 0;
-	clean_string = malloc(sizeof(char) * ft_trimed_len(s1, set));
-	if (!clean_string)
-		return (0);
-	while (s1[index])
-	{
-		if (ft_check_set(s1[index]))
-		{
-			clean_string[clean_index] = s1[index];
-			clean_index++;
-		}
-		index++;
-	}
-	clean_string[clean_index] = '\0';
-	return (clean_string);
-}
-
-static size_t	ft_check_set(unsigned char c, unsigned char *set)
+static size_t	ft_check_set(unsigned char c, const char *set)
 {
 	size_t		index;
 
@@ -50,7 +26,7 @@ static size_t	ft_check_set(unsigned char c, unsigned char *set)
 	return (1);
 }
 
-static size_t	ft_trimed_len(unsigned char *str, unsigned char *set)
+static size_t	ft_trimed_len(const char *str, const char *set)
 {
 	size_t		index;
 	size_t		valid_char_count;
@@ -59,9 +35,33 @@ static size_t	ft_trimed_len(unsigned char *str, unsigned char *set)
 	valid_char_count = 0;
 	while (str[index])
 	{
-		if (ft_check_set(str[index]))
+		if (ft_check_set(str[index], set))
 			valid_char_count++;
 		index++;
 	}
 	return (valid_char_count);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t		index;
+	char		*clean_string;
+	size_t		clean_index;
+
+	index = 0;
+	clean_index = 0;
+	clean_string = malloc(sizeof(char) * ft_trimed_len(s1, set));
+	if (!clean_string)
+		return (0);
+	while (s1[index])
+	{
+		if (ft_check_set(s1[index], set))
+		{
+			clean_string[clean_index] = s1[index];
+			clean_index++;
+		}
+		index++;
+	}
+	clean_string[clean_index] = '\0';
+	return (clean_string);
 }

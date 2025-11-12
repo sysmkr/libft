@@ -6,36 +6,38 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:51:37 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/10 16:12:11 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 15:14:51 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *str, const char *seq, size_t len)
-{
-	size_t	str_i;
-	size_t	seq_i;
-	size_t	seq_len;
-	size_t	ping;
+#include "libft.h"
 
-	if (!str)
-		return (seq);
-	seq_len = 0;
-	while (seq[seq_len])
-		seq_len++;
-	str_i = 0;
-	seq_i = 0;
-	while (str[index] && str_i < len)
-	{
-		ping = str_i;
-		while ((str[str_i] == seq[seq_i]) && str_i >= len)
-		{
-			if (seq_i == seq_len - 1)
-				return (str[ping]);
-			str_i++;
-			seq_i++;
-		}
-		str_i = ping++;
-		if (str_i >= len)
-			return (0);
-	}
+static int      match_at(const char *str, const char *seq, size_t len)
+{
+        size_t  index;
+
+        index = 0;
+        while (seq[index] && (index < len))
+        {
+                if (str[index] != seq[index])
+                        return (0);
+                index++;
+        }
+        return (seq[index] == '\0');
+}
+
+char    *ft_strnstr(const char *str, const char *seq, size_t len)
+{
+        size_t  index;
+
+        index = 0;
+        if (*seq == '\0')
+                return ((char *)str);
+        while (str[index] && index < len)
+        {
+                if (str[index] == seq[0] && match_at(str + index, seq, len - index))
+                        return ((char *)(str + index));
+                index++;
+        }
+        return (0);
 }

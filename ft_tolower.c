@@ -6,9 +6,11 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:27:53 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/09 18:31:02 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 12:35:52 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -20,11 +22,3 @@ int	ft_tolower(int c)
 	return (character);
 }
 
-#include <stdio.h>
-
-int main() 
-{
-	printf("%c\n", ft_tolower('C'));
-	printf("%c\n", ft_tolower('v'));
-	printf("%c\n", ft_tolower('7'));
-}
