@@ -3,7 +3,7 @@ CC = gcc
 AR = ar
 
 # Flags
-CFLAGS = -Wall -Wextra
+CFLAGS = -Wall -Wextra -Werror
 
 # Outputs
 LIB = libft.a
