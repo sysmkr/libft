@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 22:38:38 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 12:31:18 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 20:55:02 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		index = n;
 		while (index-- > 0)
-		{
 			casted_dest[index] = casted_src[index];
-			index--;
-		}
 	}
 	return (dest);
 }

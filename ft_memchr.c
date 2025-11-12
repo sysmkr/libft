@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:26:00 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 14:28:21 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 20:57:23 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	index = 0;
 	while (index < n)
 	{
-		if (casted_string[index] == c)
+		if (casted_string[index] == (unsigned char)c)
 			return (casted_string + index);
 		index++;
 	}

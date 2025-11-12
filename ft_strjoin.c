@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 20:50:32 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 12:33:31 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/12 21:20:29 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		common_index++;
 		index++;
 	}
+	index = 0;
 	while (s2[index])
 	{
 		final_string[common_index] = s2[index];
