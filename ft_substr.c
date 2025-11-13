@@ -6,37 +6,78 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 20:10:30 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 21:17:46 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 14:28:33 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+static size_t	check_start(char const *s, unsigned int start)
 {
-    size_t  string_len;
-    size_t  substr_len;
-    size_t  i;
-    char    *extract;
+	size_t		string_length;
 
-    string_len = ft_strlen(s);
-    if (start >= string_len)
-        return (malloc(1)); // empty string
-
-    substr_len = len;
-    if (start + len > string_len)
-        substr_len = string_len - start;
-
-    extract = malloc(substr_len + 1);
-    if (!extract)
-        return (NULL);
-
-    i = 0;
-    while (i < substr_len)
-    {
-        extract[i] = s[start + i];
-        i++;
-    }
-    extract[i] = '\0';
-    return (extract);
+	string_length = ft_strlen(s);
+	if (start >= string_length)
+		return (0);
+	return (1);
 }
+
+static size_t	up_to_len(char const *s, unsigned int start, size_t len)
+{
+	size_t	index;
+	size_t	s_len;
+
+	index = start;
+	s_len = ft_strlen(s);
+	while (index < s_len && (index - start) < len)
+		index++;
+	return (index - start);
+}
+
+static char	*fill(char *b, char const *str, unsigned int start, size_t len)
+{
+	size_t	pin;
+	size_t	index;
+	size_t	str_len;
+
+	pin = start;
+	index = 0;
+	str_len = ft_strlen(str);
+	while (pin < str_len && (pin - start) < len)
+	{
+		b[index] = str[pin];
+		index++;
+		pin++;
+	}
+	b[index] = '\0';
+	return (b);
+}
+
+static char	*safe_alloc(size_t size)
+{
+	char	*new_box;
+
+	new_box = malloc(sizeof(char) * (size + 1));
+	if (!new_box)
+		return (0);
+	if (!size)
+		new_box[0] = '\0';
+	return (new_box);
+}
+
+char		*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*substring;
+	size_t	index;
+	
+	index = start;
+	if (!check_start(s, start))
+		substring = safe_alloc(0);
+	else
+	{
+		substring = safe_alloc(up_to_len(s, start, len));
+		fill(substring, s, start, len);
+	}
+	return (substring);
+}
+
