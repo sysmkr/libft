@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 23:54:57 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 15:32:48 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 12:38:25 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	index = 0;
 	clean_index = 0;
-	clean_string = malloc(sizeof(char) * ft_trimed_len(s1, set));
+	clean_string = malloc(sizeof(char) * (ft_trimed_len(s1, set) + 1));
 	if (!clean_string)
 		return (0);
 	while (s1[index])

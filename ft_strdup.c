@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:53:30 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 15:29:35 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 12:34:29 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	string_length = 0;
 	while (s[string_length])
 		string_length++;
-	new_string = malloc(sizeof(char) * string_length);
+	new_string = malloc(sizeof(char) * (string_length + 1));
 	if (!new_string)
 		return (0);
 	index = 0;
