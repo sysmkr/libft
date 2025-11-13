@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*casted_string;
-	size_t		index;
+	size_t			index;
 
 	casted_string = (unsigned char *)s;
 	index = 0;

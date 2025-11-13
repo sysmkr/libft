@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 21:44:52 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 14:10:26 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 15:21:34 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (number >= 10)
 		ft_putnbr_fd(number / 10, fd);
-	local_putchar_fd(number % 10 + '0', fd);	
+	local_putchar_fd(number % 10 + '0', fd);
 }

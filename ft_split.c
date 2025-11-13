@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 15:50:08 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 12:32:35 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 15:04:20 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char const c)
 		if (s[index] == c)
 		{
 			index++;
-			continue;
+			continue ;
 		}
 		if (s[index] != c && s[index])
 		{

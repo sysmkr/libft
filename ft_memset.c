@@ -16,7 +16,7 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	casted_char;
 	unsigned char	*casted_string;
-	size_t		index;
+	size_t			index;
 
 	casted_string = (unsigned char *)s;
 	casted_char = (unsigned char)c;

@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 17:02:06 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 21:06:55 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 15:27:41 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dest_size)
 	else
 		return (src_len + dest_len);
 }
-

@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 16:12:32 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 13:48:07 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 15:02:26 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	index;
-	size_t 	result;
-	int	sign;
+	size_t		index;
+	size_t		result;
+	int			sign;
 
 	index = 0;
 	result = 0;

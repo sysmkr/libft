@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:27:53 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/12 12:35:52 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 15:18:50 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ int	ft_tolower(int c)
 		return (character + ('a' - 'A'));
 	return (character);
 }
-
