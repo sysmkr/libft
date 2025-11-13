@@ -6,7 +6,7 @@
 /*   By: vpolard <vpolard@student42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 20:10:30 by vpolard           #+#    #+#             */
-/*   Updated: 2025/11/13 14:28:33 by vpolard          ###   ########.fr       */
+/*   Updated: 2025/11/13 14:30:01 by vpolard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,7 @@ static char	*safe_alloc(size_t size)
 char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substring;
-	size_t	index;
 	
-	index = start;
 	if (!check_start(s, start))
 		substring = safe_alloc(0);
 	else
